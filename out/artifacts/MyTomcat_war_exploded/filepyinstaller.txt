@@ -1,0 +1,19 @@
+使用 pyinstaller 打包py文件：
+1.创建虚拟环境：conda create -n your_env_name python=X.X 
+2.进入虚拟环境：activate your_env_name(虚拟环境名称)
+3.安装虚拟环境所需要的包：conda install -n your_env_name [package]
+4.退出虚拟环境：deactivate
+5.删除虚拟环境：conda remove -n your_env_name(虚拟环境名称) --all
+6.删除虚拟环境中的某个包：conda remove --name your_env_name  package_name 
+
+打包命令（文件目录下操作）：pyinstaller -F xxx.py
+
+重新需要清理文件，否在打包不干净：
+./__pycache__
+./build
+xxx.spec
+
+错误：
+no module named 'queue' 
+
+import queue 即可
